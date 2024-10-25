@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account</title>
+    <style>
+        #loginPage, #createAccountPage {
+            display: none;
+        }
+        .error, .success {
+            color: red;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="welcomePage">
+        <h1>Welcome</h1>
+        <button id="loginBtn">Login</button>
+        <button id="createAccountBtn">Create Account</button>
+    </div>
+
+    <div id="loginPage">
+        <h1>Login</h1>
+        <form id="loginForm">
+            <input type="text" id="username" placeholder="Username" required><br>
+            <input type="password" id="password" placeholder="Password" required><br>
+            <button type="submit">Login</button>
+        </form>
+        <p id="error-message" class="error"></p>
+        <button id="createAccountBtn">Create Account</button>
+    </div>
+
+    <div id="createAccountPage">
+        <h1>Create Your Account</h1>
+        <form id="createAccountForm">
+            <input type="text" id="newUsername" placeholder="Username" required><br>
+            <input type="password" id="newPassword" placeholder="Password" required><br>
+            <input type="email" id="email" placeholder="Email" required><br>
+            <button type="submit">Create Account</button>
+        </form>
+        <p id="success-message" class="success"></p>
+        <p id="error-message-creation" class="error"></p>
+        <button id="backToLoginBtn">Back to Login</button>
+    </div>
+
+    <script src="/script.js", type="module"></script>
+</body>
+</html>
