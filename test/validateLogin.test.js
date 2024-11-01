@@ -6,4 +6,8 @@ describe('validateLogin', ()=> {
     it(`should return true for valid user and pwd`, ()=>{
         expect(validateLogin('user', 'pass')).to.be.true;
     });
+    it('should return true for correct username and correct password', ()=> {
+        expect (validateLogin("correct username", "correct password")).to.be.true;
+    });
+
 });
