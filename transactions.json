@@ -1,0 +1,11 @@
+{
+  "gas": {
+    "transactionType": "Transportation",
+    "transactionDate": "01/01/2024",
+    "accountType": "Checking",
+    "amount": 35
+  },
+  "shoppingToday": {
+    "transactionType": "Grocery"
+  }
+}

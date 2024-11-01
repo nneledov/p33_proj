@@ -1,0 +1,28 @@
+{
+  "nikita": {
+    "accountID": 28392,
+    "transactionDate": "01/01/2024",
+    "accountType": "Checking",
+    "balance": 200
+  },
+  "hanne": {
+    "accountID": 28392,
+    "dateCreated": "04/05/2017",
+    "balance": 500
+  },
+  "hernandez": {
+    "accountID": 28392,
+    "dateCreated": "08/11/2018",
+    "balance": 138
+  },
+  "jones": {
+    "accountID": 28392,
+    "dateCreated": "02/25/2020",
+    "balance": 730
+  },
+  "jackson": {
+    "accountID": 28392,
+    "transactionDate": "07/17/2019",
+    "balance": 50
+  }
+}
