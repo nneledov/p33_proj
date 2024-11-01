@@ -19,11 +19,13 @@
     <connection id="95c0be80-241f-431f-8eed-89e1c16a2367">
       <console name="Connection" type="STANDARD" schema="" session="Main"><![CDATA[CREATE DATABASE myDB;
 
-CREATE TABLE User (
-    Password VARCHAR(15) NOT NULL,
-    Email VARCHAR(100) NOT NULL UNIQUE,
-);
+USE myDB;
 
+CREATE TABLE User (
+    UserID INT PRIMARY KEY AUTO_INCREMENT,
+    Password VARCHAR(15) NOT NULL,
+    Email VARCHAR(100) NOT NULL UNIQUE
+);
 
 CREATE TABLE Account (
     AccountID INT PRIMARY KEY AUTO_INCREMENT,
@@ -33,15 +35,15 @@ CREATE TABLE Account (
     FOREIGN KEY (UserID) REFERENCES User(UserID) ON DELETE CASCADE
 );
 
-
 CREATE TABLE Transactions (
-    AccountNumber INT PRIMARY KEY AUTO_INCREMENT,
+    TransactionID INT PRIMARY KEY AUTO_INCREMENT,
+    AccountID INT NOT NULL,
     Type VARCHAR(50) NOT NULL,
     TransactionDate TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     Amount DECIMAL(10, 2) NOT NULL,
+    Name VARCHAR(50) NOT NULL,
+    Memo VARCHAR(100) NOT NULL,
     FOREIGN KEY (AccountID) REFERENCES Account(AccountID) ON DELETE CASCADE
-    Name VARCHAR (50) NOT NULL,
-    Memo VARCHAR (100) NOT NULL,
 );]]></console>
     </connection>
     <connection id="61688dc7-37a7-4283-a883-12d198b24122">
