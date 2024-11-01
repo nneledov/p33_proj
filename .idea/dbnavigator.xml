@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="DBNavigator.Project.DDLFileAttachmentManager">
+    <mappings />
+    <preferences />
+  </component>
+  <component name="DBNavigator.Project.DataEditorManager">
+    <record-view-column-sorting-type value="BY_INDEX" />
+    <value-preview-text-wrapping value="true" />
+    <value-preview-pinned value="false" />
+  </component>
   <component name="DBNavigator.Project.DatabaseBrowserManager">
     <autoscroll-to-editor value="false" />
     <autoscroll-from-editor value="true" />
@@ -8,7 +17,32 @@
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
     <connection id="95c0be80-241f-431f-8eed-89e1c16a2367">
-      <console name="Connection" type="STANDARD" schema="" session="Main" />
+      <console name="Connection" type="STANDARD" schema="" session="Main"><![CDATA[CREATE DATABASE myDB;
+
+CREATE TABLE User (
+    Password VARCHAR(15) NOT NULL,
+    Email VARCHAR(100) NOT NULL UNIQUE,
+);
+
+
+CREATE TABLE Account (
+    AccountID INT PRIMARY KEY AUTO_INCREMENT,
+    UserID INT NOT NULL,
+    AccountType VARCHAR(50) NOT NULL,
+    Balance DECIMAL(10, 2) DEFAULT 0.00,
+    FOREIGN KEY (UserID) REFERENCES User(UserID) ON DELETE CASCADE
+);
+
+
+CREATE TABLE Transactions (
+    AccountNumber INT PRIMARY KEY AUTO_INCREMENT,
+    Type VARCHAR(50) NOT NULL,
+    TransactionDate TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    Amount DECIMAL(10, 2) NOT NULL,
+    FOREIGN KEY (AccountID) REFERENCES Account(AccountID) ON DELETE CASCADE
+    Name VARCHAR (50) NOT NULL,
+    Memo VARCHAR (100) NOT NULL,
+);]]></console>
     </connection>
     <connection id="61688dc7-37a7-4283-a883-12d198b24122">
       <console name="Connection 1" type="STANDARD" schema="" session="Main" />
@@ -17,8 +51,18 @@
       <console name="Connection 2" type="STANDARD" schema="" session="Main" />
     </connection>
   </component>
+  <component name="DBNavigator.Project.DatabaseEditorStateManager">
+    <last-used-providers />
+  </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
-    <open-files />
+    <open-files>
+      <object connection-id="95c0be80-241f-431f-8eed-89e1c16a2367" object-ref="consoles/Connection" />
+    </open-files>
+  </component>
+  <component name="DBNavigator.Project.DatabaseSessionManager">
+    <connection id="95c0be80-241f-431f-8eed-89e1c16a2367" />
+    <connection id="61688dc7-37a7-4283-a883-12d198b24122" />
+    <connection id="bce60571-9d82-427f-bb1a-a4d54021ff01" />
   </component>
   <component name="DBNavigator.Project.ObjectQuickFilterManager">
     <last-used-operator value="EQUAL" />
@@ -706,5 +750,9 @@
         </visibility-settings>
       </environment>
     </general-settings>
+  </component>
+  <component name="DBNavigator.Project.StatementExecutionManager">
+    <execution-variables />
+    <execution-variable-types />
   </component>
 </project>
