@@ -6,27 +6,6 @@
     "amount": 35
   },
   "shoppingToday": {
-    "transactionType": "Grocery",
-    "transactionDate": "10/05/2024",
-    "accountType": "Savings",
-    "amount": 140
-  },
-  "videoGames": {
-    "transactionType": "Misc",
-    "transactionDate": "09/12/2024",
-    "accountType": "Checking",
-    "amount": 20
-  },
-  "taxi": {
-    "transactionType": "Transportation",
-    "transactionDate": "09/30/2024",
-    "accountType": "Savings",
-    "amount": 15
-  },
-  "bills": {
-    "transactionType": "Utilities",
-    "transactionDate": "08/01/2024",
-    "accountType": "Checking",
-    "amount": 200
+    "transactionType": "Grocery"
   }
 }
