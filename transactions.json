@@ -1,0 +1,37 @@
+{
+  "nikita": {
+    "transactionType": "Transportation",
+    "transactionDate": "01/01/2024",
+    "accountType": "Checking",
+    "amount": 35,
+    "balance": 200
+  },
+  "hanne": {
+    "transactionType": "Grocery",
+    "transactionDate": "10/05/2024",
+    "accountType": "Savings",
+    "amount": 140,
+    "balance": 500
+  },
+  "hernandez": {
+    "transactionType": "Misc",
+    "transactionDate": "09/12/2024",
+    "accountType": "Checking",
+    "amount": 20,
+    "balance": 138
+  },
+  "jones": {
+    "transactionType": "Transportation",
+    "transactionDate": "09/30/2024",
+    "accountType": "Savings",
+    "amount": 15,
+    "balance": 730
+  },
+  "jackson": {
+    "transactionType": "Utilities",
+    "transactionDate": "08/01/2024",
+    "accountType": "Checking",
+    "amount": 200,
+    "balance": 50
+  }
+}
